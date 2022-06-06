@@ -1,4 +1,4 @@
-package xyz.teamgravity.composebottomsheet.ui.theme
+package xyz.teamgravity.composebottomsheet.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 
