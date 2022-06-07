@@ -18,6 +18,7 @@ import xyz.teamgravity.composebottomsheet.R
 import xyz.teamgravity.composebottomsheet.presentation.theme.ComposeBottomSheetTheme
 
 class Main : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -31,6 +32,7 @@ class Main : ComponentActivity() {
                     val scope = rememberCoroutineScope()
 
                     BottomSheetScaffold(
+                        scaffoldState = scaffold,
                         sheetContent = {
                             Box(
                                 contentAlignment = Alignment.Center,
@@ -64,7 +66,7 @@ class Main : ComponentActivity() {
                             }
                         },
                         sheetBackgroundColor = Color.Gray,
-                        scaffoldState = scaffold,
+                        sheetPeekHeight = 128.dp,
                         floatingActionButton = {
                             FloatingActionButton(
                                 onClick = { },
@@ -76,8 +78,7 @@ class Main : ComponentActivity() {
                                 )
                             }
                         },
-                        floatingActionButtonPosition = FabPosition.End,
-                        sheetPeekHeight = 128.dp
+                        floatingActionButtonPosition = FabPosition.End
                     ) { padding ->
                         Column(
                             horizontalAlignment = Alignment.CenterHorizontally,
@@ -89,7 +90,6 @@ class Main : ComponentActivity() {
                                 onClick = {
                                     scope.launch { bottomSheet.expand() }
                                 },
-                                modifier = Modifier.padding(padding)
                             ) {
                                 Text(text = stringResource(id = R.string.click_expand_sheet) + " ${bottomSheet.progress.fraction}")
                             }
