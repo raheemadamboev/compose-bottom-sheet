@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Compose Bottom Sheet</string>
+
+    <!-- Main -->
+    <string name="swipe_up_to_expand">Swipe up to expand sheet</string>
+    <string name="sheet_content">Sheet content</string>
+    <string name="click_collapse_sheet">Click to collapse sheet</string>
+    <string name="click_expand_sheet">Click to expand sheet</string>
+
+    <!-- CD -->
+    <string name="cd_add_button">Add button</string>
+
 </resources>

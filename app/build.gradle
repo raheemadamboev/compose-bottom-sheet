@@ -73,3 +73,14 @@ dependencies {
     // lifecycle
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.4.1'
 }
+
+allprojects {
+    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+        kotlinOptions {
+            freeCompilerArgs += [
+                    "-Xuse-experimental=androidx.compose.material3.ExperimentalMaterial3Api",
+                    "-Xuse-experimental=androidx.compose.material.ExperimentalMaterialApi"
+            ]
+        }
+    }
+}
